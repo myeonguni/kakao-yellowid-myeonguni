@@ -52,7 +52,7 @@ module.exports = function(app, fs)
 			var encodeURISafe = require('encodeuri-safe'); //get방식에 쓰일 파라미터 값을 인코딩하기 위해
 			var param = encodeURISafe.encodeURIComponent(req.body["content"]);
 			var options = {
-			  url: 'https://m.search.naver.com/p/csearch/dcontent/spellchecker.nhn?_callback=window.__jindo2_callback._spellingCheck_0&q='+param,
+			  url: ''+param, //비공개
 			  headers: {
 				'User-Agent': 'request'
 			  }
